@@ -1,3 +1,7 @@
 .colorNav{
-    background-color: rgb(0, 102, 255);
+    background-color: rgb(209, 109, 42);
+}
+.cart{
+    height: 27px;
+    cursor: pointer; 
 }
