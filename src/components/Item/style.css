@@ -1,0 +1,25 @@
+/* .cardGroup{
+    margin: 20px auto;
+    width: 1036px;
+}
+.card:hover{
+    border-color: black;
+    border-width: 5px;
+}
+.card{
+    margin: 0px 30px;
+}
+.cardImg{
+    height: 23rem;
+    width: 19rem;
+} */
+.cardStyle{
+    margin-top: 50px;
+}
+.text{
+    font-size: 14px;
+    line-height: 16px;
+}
+.img{
+    height: 16em;
+}
