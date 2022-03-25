@@ -18,3 +18,17 @@ export const getFetch = new Promise((resolve, reject) => {
         reject("Error")
     }
 })
+
+// export function getFetchOne (id) {
+//         new Promise ((resolve, reject) => {
+//         let condition = true
+//         if (condition) {
+//             setTimeout(() => {
+//                 const juegos = games.find(game => game.id === id)
+//                 resolve(juegos)
+//             }, 2000)
+//         } else {
+//             reject("Error")
+//         }
+//     })
+// }
