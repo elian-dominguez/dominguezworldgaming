@@ -1,0 +1,21 @@
+.rs-panel-header{
+    font-size: 20px;
+}
+.rs-panel-body, .rs-panel-header {
+    padding: 9px;
+}
+.rs-divider-horizontal{
+    margin: 30px;
+}
+.show-grid{
+    margin: 50px 0px;
+}
+small{
+    font-size: 20px;
+}
+large{
+    font-size: 35px;
+}
+.cartButton{
+    margin: 0px 120px;
+}

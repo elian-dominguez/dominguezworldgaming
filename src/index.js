@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { CustomProvider } from 'rsuite';
 import './index.css';
+import './style.less'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CustomProvider theme="dark">
+      <App />
+    </CustomProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,8 +1,8 @@
 import Item from '../Item'
 import './style.css'
 import Container from 'react-bootstrap/esm/Container'
-import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
+import Col from 'react-bootstrap/esm/Col'
 import Spinner from 'react-bootstrap/Spinner'
 
 function ItemList({loading, games}) {
@@ -11,9 +11,15 @@ function ItemList({loading, games}) {
             <Row>
             { loading ? <Spinner animation="border" variant="warning" className='spinner'/> :
             games.map(game => (
-                <Col xs={6} md={4} key={game.id}>
-                    <Item title={game.title} description={game.description} image={game.image} price={game.price} />
+                <Col md={4} sm={8} key={game.id}>
+                    <Item id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
                 </Col>
+                // <FlexboxGrid justify="space-around">
+                //     <Item colspan={4} id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
+                // </FlexboxGrid>
+                // <Col md={6} sm={8} key={game.id}>
+                //     <Item id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
+                // </Col>
             ))
             }
             </Row>

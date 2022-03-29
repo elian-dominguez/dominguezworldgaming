@@ -1,10 +1,11 @@
 import React from 'react'
 import carrito from '../../assets/carrito.png'
+import { MdShoppingCart } from "react-icons/md";
 import './style.css'
 
 export default function CartWidget() {
   return (
-      <img src={carrito} className='cart'/>
+    <MdShoppingCart size={20} />
       )
 }
       

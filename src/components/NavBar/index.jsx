@@ -1,41 +1,74 @@
-// import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'
 import './style.css'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import CartWidget from '../CartWidget'
+// import Container from 'react-bootstrap/Container'
+// import Nav from 'react-bootstrap/Nav'
+// import Navbar from 'react-bootstrap/Navbar'
+// // import NavDropdown from 'react-bootstrap/NavDropdown'
+// import CartWidget from '../CartWidget'
+// import { Link, NavLink } from 'react-router-dom'
+import Navbar from 'rsuite/Navbar';
+import Nav from 'rsuite/Nav';
+// import { MdShoppingCart } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget';
 
 const NavBar = () => {
   return (
-      <Navbar collapseOnSelect expand="lg" className='colorNav' variant="dark">
-          <Container>
-              <Navbar.Brand href="#home">World Gaming</Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="me-auto">
-                      <Nav.Link href="#features">PC</Nav.Link>
-                      <Nav.Link href="#pricing">PlayStation</Nav.Link>
-                      <Nav.Link href="#pricing">Xbox</Nav.Link>
-                      <Nav.Link href="#pricing">Nintendo</Nav.Link>
-                      <NavDropdown title="Juegos" id="collasible-nav-dropdown">
-                          <NavDropdown.Item href="#action/3.1">Acción</NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.2">Deportes</NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.3">Aventura</NavDropdown.Item>
-                          <NavDropdown.Divider />
-                          <NavDropdown.Item href="#action/3.4">Otros</NavDropdown.Item>
-                      </NavDropdown>
-                  </Nav>
-                  <Nav>
-                      <CartWidget/>
-                      {/* <Nav.Link eventKey={2} href="#memes">
-                          Dank memes
-                      </Nav.Link> */}
-                  </Nav>
-              </Navbar.Collapse>
-          </Container>
+      <Navbar>
+        <Navbar.Brand>
+            <NavLink to='/' >World Gaming</NavLink>
+        </Navbar.Brand>
+        <Nav>
+            <Nav.Item>
+                <NavLink to='/categoria/playstation'>PlayStation</NavLink>
+            </Nav.Item>
+            <Nav.Item>
+                <NavLink to='/categoria/xbox'>Xbox</NavLink>
+            </Nav.Item>
+            <Nav.Item>
+                <NavLink to='/categoria/nintendo'>Nintendo</NavLink>
+            </Nav.Item>
+              {/* <Nav.Item>Inicio</Nav.Item>
+              <Nav.Item>PlayStation</Nav.Item>
+              <Nav.Item>Xbox</Nav.Item>
+              <Nav.Item>Nintendo</Nav.Item>
+              <NavLink to='/categoria/pc'>PC</NavLink> */}
+              {/* <Dropdown title="About">
+                  <Dropdown.Item>Company</Dropdown.Item>
+                  <Dropdown.Item>Team</Dropdown.Item>
+                  <Dropdown.Item>Contact</Dropdown.Item>
+              </Dropdown> */}
+        </Nav>
+          <Nav pullRight>
+            <Nav.Item>
+              <NavLink to='/cart'><CartWidget/></NavLink>
+            </Nav.Item>  
+          </Nav>
       </Navbar>
-  )
+  );
 }
+//       <Navbar collapseOnSelect expand="lg" className='colorNav' variant="dark">
+//           <Container>
+//               <NavLink to='/' >World Gaming</NavLink>
+//               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+//               <Navbar.Collapse id="responsive-navbar-nav">
+//                   <Nav className="me-auto">
+//                       <NavLink to='/categoria/pc'>PC</NavLink>
+//                       <NavLink to='/categoria/playstation'>PlayStation</NavLink>
+//                       <NavLink to='/categoria/xbox'>Xbox</NavLink>
+//                       <NavLink to='/categoria/nintendo'>Nintendo</NavLink>
+//                   </Nav>
+//                   <Nav>
+//                       <NavLink to='/cart'>
+//                         <CartWidget/> 
+//                         {/* <Nav.Link eventKey={2} href="#memes">
+//                             Dank memes
+//                         </Nav.Link> */}
+//                       </NavLink>
+//                   </Nav>
+//               </Navbar.Collapse>
+//           </Container>
+//       </Navbar>
+//   )
+// }
 
 export default NavBar

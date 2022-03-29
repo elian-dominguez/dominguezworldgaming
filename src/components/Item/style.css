@@ -13,13 +13,45 @@
     height: 23rem;
     width: 19rem;
 } */
-.cardStyle{
+/* .cardStyle{
     margin-top: 50px;
 }
 .text{
     font-size: 14px;
     line-height: 16px;
 }
-.img{
-    height: 16em;
+
+img {
+    heigth:210px;
+} */
+.divider{
+    background-color: orange;
+}
+/* .div{
+    display: flex;
+    justify-content: center;
+} */
+    /* style={{ display: 'flex', width: 240 }
+/* .div{
+     display:inline-block;
+} */
+.container{
+  padding: 20px 40px;
+}
+.panel{
+    font-size: 10px;
+    text-align: center;
+}
+p{
+    font-size: 18px;
+    text-align: center;
+}
+.rs-panel-header{
+    font-size: 20px;
+}
+.rs-panel-body, .rs-panel-header {
+    padding: 9px;
+}
+.rs-divider-horizontal{
+    margin: 10px;
 }
