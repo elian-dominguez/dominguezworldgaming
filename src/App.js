@@ -9,23 +9,28 @@ import ItemListContainer from './container/ItemListContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ItemDetailContainer from './container/ItemDetailContainer';
 import CartWidget from './components/CartWidget';
+import CartContextProvider, { ContextCart, contextCart } from './context/CartContext';
+import { useState } from 'react';
+
+// const [cartContext, setCartContext] = useContext([])
+// const [cartContext, setCartContext] = useState([])
 
 function App() {
-
-
   return (
-    <BrowserRouter>
-      <NavBar/>  
-      <Routes>
-          <Route path="/" element={<ItemListContainer/>} />
-          <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
-          {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
-          <Route path="/detalle/:detalleId" element={<ItemDetailContainer/>} />
-          {/* <ItemList/> */}
-          <Route path="/cart" element={<CartWidget/>}/>
-        <Route path="/*" element={<Navigate to='/' replace />}/>
-      </Routes>    
-    </BrowserRouter>  
+      <BrowserRouter>
+        <CartContextProvider>
+          <NavBar/>  
+          <Routes>
+              <Route path="/" element={<ItemListContainer/>} />
+              <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+              {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
+              <Route path="/detalle/:detalleId" element={<ItemDetailContainer/>} />
+              {/* <ItemList/> */}
+              <Route path="/cart" element={<CartWidget/>}/>
+            <Route path="/*" element={<Navigate to='/' replace />}/>
+          </Routes>    
+        </CartContextProvider> 
+      </BrowserRouter>   
   );
 }
 

@@ -7,11 +7,12 @@ import './style.css'
 // import { Link, NavLink } from 'react-router-dom'
 import Navbar from 'rsuite/Navbar';
 import Nav from 'rsuite/Nav';
-// import { MdShoppingCart } from "react-icons/md";
+import { MdShoppingCart } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
-import CartWidget from '../CartWidget';
+import { useCartContext } from '../../context/CartContext';
 
 const NavBar = () => {
+  const { cartList } = useCartContext()
   return (
       <Navbar>
         <Navbar.Brand>
@@ -40,7 +41,7 @@ const NavBar = () => {
         </Nav>
           <Nav pullRight>
             <Nav.Item>
-              <NavLink to='/cart'><CartWidget/></NavLink>
+              <NavLink to='/cart'><MdShoppingCart size={25} />({cartList.length})</NavLink>
             </Nav.Item>  
           </Nav>
       </Navbar>

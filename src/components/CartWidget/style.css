@@ -2,3 +2,14 @@
     height: 27px;
     cursor: pointer; 
 }
+.cartList{
+    margin: 30px;
+}
+.cartList div {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.clearList{
+    float:right;
+}

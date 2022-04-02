@@ -24,7 +24,7 @@ function Item({id, title, image, price}) {
                 <p>
                     <small>
                         <Link to={`/detalle/${id}`} >
-                            <Button color="orange" appearance="primary">COMPRAR</Button>
+                            <Button color="orange" appearance="primary">DETALLE</Button>
                         </Link>
                     </small>
                 </p>
