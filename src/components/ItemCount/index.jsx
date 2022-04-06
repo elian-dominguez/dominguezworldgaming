@@ -30,13 +30,12 @@ function ItemCount({stock, initial, onAdd}) {
   }
 
   const ButtonCount = ({ handleInter }) => {
-    return (
-      <div>
-      { 
-          <Button onClick={handleInter}color="green" appearance="primary">Agregar al carrito</Button>
-      }
-      </div>
-    )
+    return <Button 
+    onClick={handleInter}
+    color="green" 
+    appearance="primary">
+    Agregar al carrito
+    </Button>
   }
 
   const handleInter = () => {

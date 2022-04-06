@@ -14,12 +14,6 @@ function ItemList({loading, games}) {
                 <Col md={4} sm={8} key={game.id}>
                     <Item id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
                 </Col>
-                // <FlexboxGrid justify="space-around">
-                //     <Item colspan={4} id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
-                // </FlexboxGrid>
-                // <Col md={6} sm={8} key={game.id}>
-                //     <Item id={game.id} title={game.title} description={game.description} image={game.image} price={game.price} />
-                // </Col>
             ))
             }
             </Row>

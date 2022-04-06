@@ -26,6 +26,10 @@ function CartContextProvider({children}) {    // Componente
         }
     }
 
+    function itemsPrice () {
+        cartList.reduce((a, c) => a + c.price * c.cantidad, 0);
+    }
+
     function eliminateFromCartList(id) {
         // Elimino el producto por Id filtrando y quedandome con todos los que no tienen el id seleccionado
         const newCart = cartList.filter(product => product.id !== id)
@@ -44,7 +48,8 @@ function CartContextProvider({children}) {    // Componente
                 cartList,                       // Por convención estados arriba y funciones abajo
                 addToCart,
                 eliminateFromCartList,
-                clearCartList
+                clearCartList,
+                itemsPrice
             }}>
                 {children}
             </CartContext.Provider>

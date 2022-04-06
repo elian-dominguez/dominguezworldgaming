@@ -17,7 +17,7 @@ function Item({id, title, image, price}) {
                 <Divider />
                 <p>
                     <small>
-                        PRECIO: {price}
+                        PRECIO: ${price}
                     </small>
                 </p>
                 <Divider />

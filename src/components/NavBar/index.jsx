@@ -1,10 +1,4 @@
 import './style.css'
-// import Container from 'react-bootstrap/Container'
-// import Nav from 'react-bootstrap/Nav'
-// import Navbar from 'react-bootstrap/Navbar'
-// // import NavDropdown from 'react-bootstrap/NavDropdown'
-// import CartWidget from '../CartWidget'
-// import { Link, NavLink } from 'react-router-dom'
 import Navbar from 'rsuite/Navbar';
 import Nav from 'rsuite/Nav';
 import { MdShoppingCart } from "react-icons/md";
@@ -13,6 +7,12 @@ import { useCartContext } from '../../context/CartContext';
 
 const NavBar = () => {
   const { cartList } = useCartContext()
+  let itemInCart = 0;
+
+  cartList.map((item) => {
+    itemInCart += item.cantidad
+  })
+
   return (
       <Navbar>
         <Navbar.Brand>
@@ -41,7 +41,7 @@ const NavBar = () => {
         </Nav>
           <Nav pullRight>
             <Nav.Item>
-              <NavLink to='/cart'><MdShoppingCart size={25} />({cartList.length})</NavLink>
+          <NavLink to='/cart'><MdShoppingCart size={25} />{cartList.length === 0 ? "" : itemInCart}</NavLink>
             </Nav.Item>  
           </Nav>
       </Navbar>

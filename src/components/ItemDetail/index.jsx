@@ -18,18 +18,6 @@ export default function ItemDetail({game}) {
   console.log(cartList)
 
   return (
-    // <Card style={{ width: '15rem' }} className='cardStyle'>
-    //   <Card.Img variant="top" src={game.image} className='img' />
-    //   <Card.Body className='width'>
-    //     <Card.Title>{game.title}</Card.Title>
-    //     <Card.Text className='text'>
-    //       {game.description}
-    //     </Card.Text>
-    //   </Card.Body>
-    //   <ListGroup className="list-group-flush">
-    //     <ListGroupItem>{game.price}</ListGroupItem>
-    //   </ListGroup>
-    // </Card>
     <Container>
       <Row className="show-grid">
         <Col xs={8}> <img src={game.image} height="400" width="300px" /></Col>
@@ -51,7 +39,7 @@ export default function ItemDetail({game}) {
           <small>
             PRECIO 
           <br/>
-            {game.price}
+            ${game.price}
           </small>
         </p>
           <Divider />
