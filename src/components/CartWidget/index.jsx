@@ -35,7 +35,6 @@ export default function CartWidget() {
           </tr>
         </thead>
     { cartList.map(game =>
-      <>
         <tbody key={game.id}>
           <tr>
             <td>{game.id}</td>
@@ -45,7 +44,6 @@ export default function CartWidget() {
             <td> <BsTrash onClick={() => eliminateFromCartList(game.id)} size={20} cursor={'pointer'}/> </td>     
           </tr>
         </tbody> 
-      </>
       )}
       <br />
       {cartList.length !== 0 ? 
