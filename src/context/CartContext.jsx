@@ -26,8 +26,10 @@ function CartContextProvider({children}) {    // Componente
         }
     }
 
+    // Mediante el método reduce tengo un acumulador iniciado en 0 y un item, en este caso multiplico la cantidad
+    // por el precio más la suma del acumulador y devuelvo un resultado para obtener el total.
     function itemsPrice () {
-        cartList.reduce((a, c) => a + c.price * c.cantidad, 0);
+        return cartList.reduce((acum, item) => acum + (item.price * item.cantidad) , 0);
     }
 
     function eliminateFromCartList(id) {

@@ -41,7 +41,11 @@ const NavBar = () => {
         </Nav>
           <Nav pullRight>
             <Nav.Item>
-          <NavLink to='/cart'><MdShoppingCart size={25} />{cartList.length === 0 ? "" : itemInCart}</NavLink>
+          <NavLink to='/cart'><MdShoppingCart size={25} />
+          {
+          cartList.length === 0 ? "" : itemInCart
+          }
+          </NavLink>
             </Nav.Item>  
           </Nav>
       </Navbar>
