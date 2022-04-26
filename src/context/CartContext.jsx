@@ -1,3 +1,4 @@
+import React from 'react';
 import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext([])
@@ -14,7 +15,7 @@ function CartContextProvider({children}) {    // Componente
         // Si existe seteo el cartList, recorro el cartList con un map, comparo el id del producto que ya tengo con el que quiero agregar, si es verdadero incremento la cantidad con la cantidad ya existente.
             setCartList(
                 cartList.map(game => 
-                    game.id === item.id ? {...exist, cantidad: exist.cantidad + item.cantidad } : game
+                    game.id === item.id ? {...exist, quantity: exist.quantity + item.quantity } : game
             )
         )
     } else {
@@ -29,7 +30,7 @@ function CartContextProvider({children}) {    // Componente
     // Mediante el método reduce tengo un acumulador iniciado en 0 y un item, en este caso multiplico la cantidad
     // por el precio más la suma del acumulador y devuelvo un resultado para obtener el total.
     function itemsPrice () {
-        return cartList.reduce((acum, item) => acum + (item.price * item.cantidad) , 0);
+        return cartList.reduce((acum, item) => acum + (item.price * item.quantity) , 0);
     }
 
     function eliminateFromCartList(id) {

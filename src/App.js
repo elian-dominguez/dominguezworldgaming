@@ -1,17 +1,13 @@
-// import { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'rsuite/dist/rsuite.min.css';
-import './App.css';
-import './style.less'
+import React from 'react';
 import NavBar from './components/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ItemDetailContainer from './container/ItemDetailContainer';
-import CartWidget from './components/CartWidget';
-import CartContextProvider, { ContextCart, contextCart } from './context/CartContext';
+import CartContainer from './container/CartContainer';
+import CartContextProvider from './context/CartContext';
 
-// const [cartContext, setCartContext] = useContext([])
-// const [cartContext, setCartContext] = useState([])
+import 'rsuite/dist/rsuite.min.css';
+import './App.css';
 
 function App() {
   return (
@@ -20,11 +16,11 @@ function App() {
           <NavBar/>  
           <Routes>
               <Route path="/" element={<ItemListContainer/>} />
-              <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+              <Route path="/category/:categoryId" element={<ItemListContainer />} />
               {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
-              <Route path="/detalle/:detalleId" element={<ItemDetailContainer/>} />
+              <Route path="/detail/:detailId" element={<ItemDetailContainer/>} />
               {/* <ItemList/> */}
-              <Route path="/cart" element={<CartWidget/>}/>
+              <Route path="/cart" element={<CartContainer/>}/>
             <Route path="/*" element={<Navigate to='/' replace />}/>
           </Routes>    
         </CartContextProvider> 

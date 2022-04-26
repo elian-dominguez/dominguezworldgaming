@@ -1,29 +1,30 @@
 import React from 'react'
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { Button, InputGroup, InputNumber } from 'rsuite'
-import './style.css'
+import { Button, InputGroup, Input } from 'rsuite'
 
 function ItemCount({stock, initial, onAdd}) {
 
   const [count, setCount] = useState(initial)
-  const [inputType, setInputType] = useState('button')
+  const [inputType, setInputType] = useState(Button)
   const [hide, setHide] = useState(true)
 
   const InputCount = () => {
     return (
       <div>
       <Link to='/cart' >
-        <button
-          className="btn btn-primary"
+        <Button
+          color="blue"
+          appearance='primary'
           onClick={() => console.log('Ir al carrito')}
-        >Ir al Carrito</button>
+        >Ir al Carrito</Button>
       </Link>
       <Link to='/' >
-        <button
-          className="btn btn-success"
+        <Button
+          color="green"
+          appearance='primary'
           onClick={() => console.log('Terminar compra')}
-        >Terminar compra</button>
+        >Terminar compra</Button>
       </Link>
       </div>
     )
@@ -40,7 +41,6 @@ function ItemCount({stock, initial, onAdd}) {
 
   const handleInter = () => {
     setInputType('input', onAdd(count))
-    setHide(false)
   }
  
   const addProduct = (num) => {
@@ -48,39 +48,27 @@ function ItemCount({stock, initial, onAdd}) {
   }
 
     return (
-      <> { 
+      <> 
+      { 
         hide ?
         <div style={{ width: 250, marginLeft: 50, textAlign: 'center'}}>
-          <InputGroup >
+          <InputGroup>
             <InputGroup.Button onClick={() => addProduct(-1)} disabled={count === initial}>-</InputGroup.Button>
-            <InputNumber readOnly className={'custom-input-number'} value={count} size='lg' />
+            <Input className='input-number' readOnly value={count} size='lg'/>
             <InputGroup.Button onClick={() => addProduct(+1)} disabled={count >= stock}>+</InputGroup.Button>
-            <br />
+            <br/>
           </InputGroup>
-          <br />
+          <br/>
           {
-            inputType === 'button' ?
-              <ButtonCount handleInter={handleInter} /> 
+            inputType === Button ?
+              <ButtonCount handleInter={handleInter}/> 
             :
-              <InputCount style={{ margin: 50 }} />
+              <InputCount style={{ margin: 50 }}/>
           }
         </div>
-         :  
-        <div style={{ width: 250, marginLeft: 50, textAlign: 'center' }} >
-        <InputGroup style={{display: 'none'}} >
-          <InputGroup.Button onClick={() => addProduct(-1)} disabled={count === initial}>-</InputGroup.Button>
-          <InputNumber readOnly className={'custom-input-number'} value={count} size='lg' />
-          <InputGroup.Button onClick={() => addProduct(+1)} disabled={count >= stock}>+</InputGroup.Button>
-          <br />
-        </InputGroup>
-            {    
-          inputType === 'button' ?
-            <ButtonCount handleInter={handleInter} />
-          :
-            <InputCount style={{ margin: 50 }} />
-            }
-        </div> 
-       }        
+         :
+         setHide(false) 
+        }        
       </>
     )
   }

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { CustomProvider } from 'rsuite';
-import './index.css';
-import './style.less'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { getFirestoreApp } from './firebase/config';
+
+import './index.css';
 
 getFirestoreApp()
 
