@@ -16,14 +16,12 @@ function ItemCount({stock, initial, onAdd}) {
         <Button
           color="blue"
           appearance='primary'
-          onClick={() => console.log('Ir al carrito')}
         >Ir al Carrito</Button>
       </Link>
       <Link to='/' >
         <Button
           color="green"
           appearance='primary'
-          onClick={() => console.log('Terminar compra')}
         >Terminar compra</Button>
       </Link>
       </div>

@@ -14,15 +14,15 @@ export default function ItemDetailContainer() {
   // Especifico un producto
   useEffect(()=> {
     const querydb = getFirestore()
-    const queryProd = doc(querydb, 'productos', detailId) //En vez de hardcodear el Id le paso el params
+    const queryProd = doc(querydb, 'productos', detailId) 
 
-    getDoc(queryProd) //Si traigo uno solo utilizo {} para objeto, sino [] para array
+    getDoc(queryProd) 
       .then(resp => setGame({ id: resp.id, ...resp.data() }))
       .catch(err => console.log(err))
-      .finally(() => setLoading(false)) 
+      .finally(() => setTimeout(() => {
+                        setLoading(false)
+                          }, 500)) 
   }, [])
-  console.log(game)
-  console.log(detailId)
 
   return (
     <Grid>

@@ -17,9 +17,7 @@ function App() {
           <Routes>
               <Route path="/" element={<ItemListContainer/>} />
               <Route path="/category/:categoryId" element={<ItemListContainer />} />
-              {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
               <Route path="/detail/:detailId" element={<ItemDetailContainer/>} />
-              {/* <ItemList/> */}
               <Route path="/cart" element={<CartContainer/>}/>
             <Route path="/*" element={<Navigate to='/' replace />}/>
           </Routes>    

@@ -4,6 +4,7 @@ import Loader from 'rsuite/Loader';
 import { Col, Grid, Row } from 'rsuite'
 
 function ItemList({loading, games}) {
+
     return (
         <Grid>
             <Row className="show-grid">

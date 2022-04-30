@@ -5,14 +5,11 @@ import { useCartContext } from "../../context/CartContext";
 
 export default function ItemDetail({game}) {
 
-  const { addToCart, cartList} = useCartContext()
+  const { addToCart } = useCartContext()
 
   const onAdd = (count) => {
-    console.log(count)
     addToCart({ ...game, quantity: count })
-    console.log(game)
   }
-  console.log(cartList)
 
   return (
     <Container>

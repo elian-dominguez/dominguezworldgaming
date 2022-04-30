@@ -37,7 +37,6 @@ export default function CartForm() {
 
         addDoc(queryCollection, order)
             .then(result => {
-                console.log(result)
                 return result
             })
             .then(result => toaster.push(<Message duration={4000} type='success'>
@@ -54,8 +53,6 @@ export default function CartForm() {
             [event.target.name]: event.target.value
         })
     }
-
-    console.log(formValue)
 
     return (
         <div>

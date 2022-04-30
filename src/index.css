@@ -16,6 +16,7 @@ code {
   height: 27px;
   cursor: pointer;
   width: 30px;
+  text-decoration: none;
 }
 
 .cartList {
@@ -74,27 +75,31 @@ code {
 .navBar{
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  text-align: center;
 }
-
 .navBar .nintendo {
   text-decoration: none;
+  text-align: center;
+  padding: 20px 0px;
 }
 .navBar .playstation{
   text-decoration: none;
+  padding: 20px 0px;
 }
 .navBar .xbox {
   text-decoration: none;
+  padding: 20px 0px;
 }
 .navBar .logo {
   text-decoration: none;
+  padding: 5px 0px;
 }
 .navbar .cartLink{
   text-decoration: none;
 }
 
 .cartLink {
+  padding: 15px 0px;
   margin-left: 900px;
   text-decoration: none;
 }

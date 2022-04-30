@@ -1,5 +1,4 @@
 @import '~rsuite/dist/rsuite.min.css';
-@enable-dark-mode: true;
 
 .App {
   text-align: center;
