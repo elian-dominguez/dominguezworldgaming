@@ -7,7 +7,7 @@ import { collection, getDocs, getFirestore, query, where } from 'firebase/firest
 export default function ItemListContainer() {
   const [games, setGames] = useState([])
   const [loading, setLoading] = useState(true)
-  const {categoryId} = useParams() // Hook de react router dom
+  const {categoryId} = useParams() // Hook de React Router DOM
 
 useEffect(() => {
   const querydb = getFirestore()
