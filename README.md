@@ -20,4 +20,4 @@ React Icons `4.3.1`  | Libería que permite añadir íconos (desde distintas lib
 
 ## Demo
 
-Para ver la demostración de la aplicación hace click [AQUÍ.](https://ornate-pegasus-133f64.netlify.app/ "AQUÍ.")
+Para ver la demostración de la aplicación hace click [AQUÍ.](https://thriving-hamster-e9f059.netlify.app// "AQUÍ.")
