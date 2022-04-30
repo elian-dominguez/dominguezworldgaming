@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# **World Gaming**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+- Proyecto final de `Coder House` realizado en `ReactJS`. La aplicación permite conectarse a una base de datos de documentos NoSQL llamado `Firestore` donde se podrán almacenar, sincronizar y consultar datos de la app.
+- Es un sitio de videojuegos en el cual se podrá seleccionar categorías y detalle de los distintos productos.
+- Al ingresar al detalle de un producto se verá toda la información del mismo, caratula, descripción, nombre y precio del juego.
+- Se podrá elegir la cantidad que deseemos comprar, una vez elegida la cantidad se deberá seleccionar el botón ***Agregar al carrito* **, una vez clickeado aparecerán dos botones: ***Ir al carrito*** para ver los productos agregados en el carrito, o ***Seguir comprando*** para agregar más juegos.
+- Una vez terminado de elegir los productos se podrá acceder al carrito desde su ícono correspondiente ubicado arriba a la derecha de la barra de navegación o también en el botón ***Ir al carrito*** cuando se selecciona la cantidad. En él se verán los videojuegos agregados con su ID, nombre, cantidad, precio y la posibilidad de eliminar el producto y limpiar el carrito si asi se desea.
+- Finalmente cuando se quiera terminar la compra se deberá completar los datos de compra en un formulario y hacer click en ***Confirmar***. Cuando se termine de confirmar los productos y los datos se generará un ID de orden de compra. El carrito se vaciará y se podrá seguir comprando juegos haciendo click en el botón ***¡Comprar ya!***, o haciendo click en el logo de la app.
 
-In the project directory, you can run:
+## Librerías externas
 
-### `npm start`
+Dependencias  | Uso
+------------- | -------------
+React Router DOM `17.0.2`  | Navegación entre vistas y enrutamiento dinámico gracias a los componentes, rutas que renderizan un componente.
+Firebase `9.6.10 ` | Desarrolla y facilita la creación de mi app mediante Firestore, una base de datos NoSQL.
+RSuite `5.6.6`  |  Framework front-end utilizado para desarrollar mi aplicación web.
+React Icons `4.3.1`  | Libería que me permite añadir íconos (desde distintas librerías de íconos).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para ver la demostración de la aplicación hace click [AQUÍ.](https://ornate-pegasus-133f64.netlify.app/ "AQUÍ.")
