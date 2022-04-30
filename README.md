@@ -14,7 +14,7 @@
 Dependencias  | Uso
 ------------- | -------------
 React Router DOM `17.0.2`  | Navegación entre vistas y enrutamiento dinámico gracias a los componentes, rutas que renderizan un componente.
-Firebase `9.6.10 ` | Desarrolla y facilita la creación de mi app mediante Firestore, una base de datos NoSQL.
+Firebase `9.6.10 ` | Desarrolla y facilita la creación de la app mediante Firestore, una base de datos NoSQL.
 RSuite `5.6.6`  |  Framework front-end utilizado para desarrollar la aplicación web.
 React Icons `4.3.1`  | Libería que permite añadir íconos (desde distintas librerías de íconos).
 
